@@ -12,17 +12,14 @@ def format_file(title, text):
 
 
 strings = []
+tree = []
 for file in pathlib.Path().rglob("*.py"):
     if str(file) == __file__:
         continue
     strings.append(format_file(file.name, file.read_text()))
+    tree.append("python-greeter/" + str(file))
 
-tree = (
-    "\n```\n"
-    + "\n".join("python-greeter/" + str(p) for p in pathlib.Path().rglob("*.py"))
-    + "\n```\n"
-)
-
-output = pathlib.Path("input/header.md").read_text() + tree + "".join(strings)
+tree_str = "```\n" + "\n".join(tree) + "\n```\n"
+output = pathlib.Path("input/header.md").read_text() + tree_str + "".join(strings)
 
 pathlib.Path("README.md").write_text(output)
