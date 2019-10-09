@@ -1,0 +1,25 @@
+language: python
+sudo: true
+cache: pip
+env:
+  global:
+  - LD_PRELOAD=/lib/x86_64-linux-gnu/libSegFault.so
+  - SEGFAULT_SIGNALS=all
+
+
+before_install:
+- python --version
+- uname -a
+- lsb_release -a
+install:
+- sudo apt-get install python3-pip python3-venv python3-dev
+script:
+- /usr/bin/python3 -m venv venv
+- venv/bin/python3 -m pip install wheel
+- venv/bin/python3 -m pip install .
+- ls -la venv/bin
+- venv/bin/greet
+notifications:
+  email:
+    on_success: never
+    on_failure: always

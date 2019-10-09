@@ -1,3 +1,5 @@
+![Build status](https://img.shields.io/travis/com/energizah/minimal-python-project/master)
+
 ## How to use this
 
 1. Create a file tree structure matching the one described below.
