@@ -7,6 +7,8 @@ def format_file(title, text):
 
 strings = []
 for file in pathlib.Path().rglob("*.py"):
+    if str(file) == __file__:
+        continue
     strings.append(format_file(file.name, file.read_text()))
 
 tree = (
