@@ -1,3 +1,5 @@
+# Minimal Python project
+
 ![Build status](https://img.shields.io/travis/com/energizah/minimal-python-project/master)
 
 ## How to use this
