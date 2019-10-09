@@ -3,16 +3,9 @@ import click
 
 from greetings import app
 
-@click.group()
-def cli():
-    pass
 
-
-@cli.command()
-def morning(**kwargs):
-    app.morning(**kwargs)
-
-
-@cli.command()
-def evening(**kwargs):
-    app.evening(**kwargs)
+commands = [
+    click.Command("morning", callback=app.morning),
+    click.Command("evening", callback=app.evening),
+]
+cli = click.Group(commands={c.name: c for c in commands})
