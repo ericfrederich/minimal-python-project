@@ -26,12 +26,3 @@ myenv/bin/greet
 
 
 The `python-greeter/` directory is called the "project root". That should be your shell's working directory whenever you're using this project.
-
-```
-python-greeter/setup.py
-python-greeter/requirements.in
-python-greeter/src/greetings/__init__.py
-python-greeter/src/greetings/__main__.py
-python-greeter/src/greetings/cli.py
-python-greeter/src/greetings/app.py
-```
