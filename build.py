@@ -1,3 +1,9 @@
+"""Generate the readme from the files in this repository.
+
+Generating it automatically helps ensure that the readme stays in synch with the files.
+
+"""
+
 import pathlib
 
 
