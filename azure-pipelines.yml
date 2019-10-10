@@ -1,0 +1,12 @@
+resources:
+  repositories:
+  - repository: template
+    type: github
+    name: altendky/azure-pipelines-python
+
+
+stages:
+  - template:
+    parameters:
+      name: hello
+      operating_systems: linux macos
