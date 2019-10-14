@@ -18,11 +18,18 @@ python3 -m venv myenv
 myenv/bin/pip install -e .
 ```
 
-4. Run the console script `greet` in the venv.
+4. Run the console script `greet` in the venv:
 
 ```
 myenv/bin/greet
 ```
+
+or run `__main__.py` as a module:
+
+```
+myenv/bin/python -m greetings
+```
+
 
 ## Tree structure
 
