@@ -12,7 +12,7 @@
 python3 -m venv myenv
 ```
 
-3. Install your project into the venv in editable mode. Editable mode means you can make changes to your code without reinstalling (with the exception of `setup.py`. If you change that, you'll have to reinstall.).
+3. Install your project into the venv in editable mode. Editable mode means you can make changes to your code without reinstalling. There are a couple of exceptions: if you change `setup.py` or create a new subpackage (subdirectory), you'll have to install again.
 
 ```
 myenv/bin/pip install -e .
