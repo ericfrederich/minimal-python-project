@@ -1,7 +1,7 @@
 # cli.py
 import click
 
-from greetings import app
+from . import app
 
 
 commands = [
