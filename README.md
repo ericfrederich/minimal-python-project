@@ -52,16 +52,14 @@ import setuptools
 
 PROJECT_DIR = pathlib.Path(__file__).parent
 
-DISTRIBUTION_PACKAGE_NAME = "hello"
+DISTRIBUTION_NAME = "hello" # The "pip install" name.
 VERSION = "0.1.0"
 DESCRIPTION = "Greetings."
 CONSOLE_SCRIPTS = ["greet = greetings.cli:cli"]
-
-
-INSTALL_REQUIRES = (PROJECT_DIR / "requirements.in").read_text().splitlines()
+INSTALL_REQUIRES = ["attrs", "click"]
 
 setuptools.setup(
-    name=DISTRIBUTION_PACKAGE_NAME,
+    name=DISTRIBUTION_NAME,
     version=VERSION,
     description=DESCRIPTION,
     packages=setuptools.find_packages("src"),
